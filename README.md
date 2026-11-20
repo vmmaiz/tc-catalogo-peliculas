@@ -18,25 +18,15 @@ Catálogo de películas enriquecido a partir del dataset MovieLens: análisis co
 ```
 tc-catalogo-peliculas/
 ├── 00_enunciado_general.ipynb                         # enunciado (no se edita)
-```
 ├── 01_ingesta_limpieza.ipynb
-```
 ├── 02_analisis.ipynb
-```
 ├── 03_tmdb.ipynb
-```
 ├── 04_gemini.ipynb
-```
 ├── data/
-```
 │   ├── movies.csv, ratings.csv, tags.csv, links.csv   # datos originales
-```
 │   └── processed/                                     # CSV generados por los notebooks
-```
 ├── requirements.txt
-```
 ├── .env.example                                       # plantilla de claves (sin valores)
-```
 └── .gitignore
 ```
 
