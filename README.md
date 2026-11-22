@@ -91,3 +91,6 @@ Si Gemini devuelve un error 404 / model not found, cambiad la constante MODEL al
 
 A cumplimentar al final, en README final
 <3–5 frases con lo más interesante que habéis encontrado>
+### Notebook 02 · Análisis con pandas (apartados 3-4)
+ -  **Merge de tablas:** Cruce por `movieId` (`how="left"`, `validate="many_to_one"`) para construir `ratings_movies` y `tags_movies`, además de identificar las películas sin valoraciones
+ -  **Agregaciones y segmentos:** Resumen por `userId` (cantidad de valoraciones y nota media) y segmentación en `"Muchas valoraciones"` y `"Pocas valoraciones"` a partir de la mediana de valoraciones por usuario
