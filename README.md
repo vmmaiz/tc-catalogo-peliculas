@@ -91,6 +91,18 @@ Si Gemini devuelve un error 404 / model not found, cambiad la constante MODEL al
 
 A cumplimentar al final, en README final
 <3–5 frases con lo más interesante que habéis encontrado>
+HEAD
 ### Notebook 02 · Análisis con pandas (apartados 3-4)
  -  **Merge de tablas:** Cruce por `movieId` (`how="left"`, `validate="many_to_one"`) para construir `ratings_movies` y `tags_movies`, además de identificar las películas sin valoraciones
  -  **Agregaciones y segmentos:** Resumen por `userId` (cantidad de valoraciones y nota media) y segmentación en `"Muchas valoraciones"` y `"Pocas valoraciones"` a partir de la mediana de valoraciones por usuario
+
+
+
+**Notebook 01 · Ingesta y limpieza**
+
+- El dataset MovieLens contiene **9.742 películas**, **100.836 valoraciones**, **3.683 etiquetas** y **9.742 links**. Ninguna tabla tiene nulos salvo `links`.
+- **8 películas no tienen `tmdbId`** en `links.csv`, así que **no se podrán consultar en TMDB** (notebook 03).
+- El año se ha extraído del título con la regex `\((\d{4})\)\s*$`. Hay **13 películas sin año reconocible**, incluido el rango *Death Note (2006–2007)*. Siguiendo el enunciado, su `year` queda como `NaN`.
+- **Esas 13 películas quedan fuera de cualquier análisis o filtro por año** (`groupby("year")`, décadas, `year >= 2000`…). Por eso los totales por año suman **9.729**, no 9.742.
+- Para conservar el tipo entero con nulos, leed el fichero con `pd.read_csv("data/processed/movies_clean.csv", dtype={"year": "Int64"})`.
+develop
