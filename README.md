@@ -91,3 +91,12 @@ Si Gemini devuelve un error 404 / model not found, cambiad la constante MODEL al
 
 A cumplimentar al final, en README final
 <3–5 frases con lo más interesante que habéis encontrado>
+
+
+**Notebook 01 · Ingesta y limpieza**
+
+- El dataset MovieLens contiene **9.742 películas**, **100.836 valoraciones**, **3.683 etiquetas** y **9.742 links**. Ninguna tabla tiene nulos salvo `links`.
+- **8 películas no tienen `tmdbId`** en `links.csv`, así que **no se podrán consultar en TMDB** (notebook 03).
+- El año se ha extraído del título con la regex `\((\d{4})\)\s*$`. Hay **13 películas sin año reconocible**, incluido el rango *Death Note (2006–2007)*. Siguiendo el enunciado, su `year` queda como `NaN`.
+- **Esas 13 películas quedan fuera de cualquier análisis o filtro por año** (`groupby("year")`, décadas, `year >= 2000`…). Por eso los totales por año suman **9.729**, no 9.742.
+- Para conservar el tipo entero con nulos, leed el fichero con `pd.read_csv("data/processed/movies_clean.csv", dtype={"year": "Int64"})`.
