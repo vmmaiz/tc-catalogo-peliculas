@@ -91,6 +91,15 @@ Si Gemini devuelve un error 404 / model not found, cambiad la constante MODEL al
 |README final                | 	docs/readme-final    |	A                        |
 
 
+## AVISOS PRUEBA REPRODUCIBILIDAD
+Por el camino ha encontrado cuatro cosas:
+
+1	VS Code abrió la **carpeta en modo restringido y no dejaba elegir el kernel**	Aviso de Restricted Mode → Trust 
+2	Sin .env, el 03 pide la clave en una ventana   	
+3	Sin .env, el 04 da No API key was provided	**fix: Pedir la clave con getpass**
+
+
+
 ## Resultados principales
 
 ### Notebook 01 · Ingesta y limpieza
